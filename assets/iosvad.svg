@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="56px" height="52px" viewBox="0 0 56 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6 (26304) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0,14.2141572 C0,-1.06770392 21.2693601,-6.731319 27.8139107,10.9594455 C34.3584473,-6.731319 55.6278004,-1.06770392 55.6278004,14.2141572 C55.6278004,30.8177161 27.8139107,51.869127 27.8139107,51.869127 C27.8139107,51.869127 0,30.8177161 0,14.2141572"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-862.000000, -361.000000)">
+            <g id="Page-1" transform="translate(862.000000, 361.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#383DE5" xlink:href="#path-1"></use>
+                <path d="M27.5644444,40.8447619 L42.0373333,22.9047619 C41.4773333,22.4838095 35.9084444,17.952381 27.552,17.952381 C19.1955556,17.952381 13.6266667,22.4838095 13.0666667,22.9047619 L27.5395556,40.8447619 L27.552,40.8571429 L27.5644444,40.8447619 L27.5644444,40.8447619 Z" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

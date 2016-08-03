@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/noahgallant
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://gallant.io
+  * I am noahgallant (https://keybase.io/noahgallant) on keybase.
+  * I have a public key with fingerprint 2580 2649 595C 2C0A B900  34A0 346B 61C6 3447 643C
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101ca6ee40235f0e47dc176f557f2058905e44f19b6ecd12cd06b920fa18709109d0a",
+            "fingerprint": "25802649595c2c0ab90034a0346b61c63447643c",
+            "host": "keybase.io",
+            "key_id": "346b61c63447643c",
+            "kid": "0101ca6ee40235f0e47dc176f557f2058905e44f19b6ecd12cd06b920fa18709109d0a",
+            "uid": "b24c331a682c4225c4d6bc22b84c6f19",
+            "username": "noahgallant"
+        },
+        "service": {
+            "hostname": "gallant.io",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1468181640,
+    "expire_in": 157680000,
+    "prev": "094efeac992dfb3c27bb608bdfae05c4f7fbbac29a1686ba48ebfcd9793da87d",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.53
+Comment: https://keybase.io/crypto
+
+yMInAnicrVJbSBVBGF7LwqygJM3yodoCoTRmZ2dnd08EhRDYhdKKCq3TzOzscVPP
+ns45mlYadEjroQsUhF0QMx+62UOSZSaWVlIhpL51IXvQkqywfMous2ZvPTYwDPPP
+933zfT9/58zJUmJcmrmfdOb0P4x79uBsibTt8PWjB2TqWuWy74BcyMcPXmTxSNRf
+6FiyTwYKUBjBnCMAVc0GHOkWU3Rsa5puQ6AZJtA4QrZiUsyZpUBmAUxNCGyiGDow
+FWBagMgZsu0EAzwcCjvBqJCFmgEgRqZmagwyQKgJgIqI2JhihWEVIR0jlQligRvx
+GMIcJRG+3HFFTVz84/b+gf/PvkvG5ShETFUVgg3IEIQaQxamDEJqIIaFiAeM8HCQ
+FHOBDrqkIECKiojIWpEhi4dSh3Gvt16YCdAE4E+gUNiNuswtEvWCaDTk82jR8pCH
+28epf0LBT52gJfooCKU8HHHcoOxTBJJFHU9SQdhQDAUjkCHzspAT5n7HQ2g6NoBY
+3je81GuOibjNCTNNaNlUZVCnFAODWjbhQGSzdZtSwqBJFGxgSpDBqc0sUzdVixi6
+JXuZ9gZd2acLmyQgJCNOIEiiJWEuVzxsz4+X4hKlqVMmefMlJU6b9Xfqqu8nSKfg
+lqxAzlmrrHfxxsepLYMpue0j6z7kjfSq9TvOzOlrSL7NhmuLUx61ZSfvrFkUP3z3
+S2A1+LhgQCrb3T84mt34+fj5xdtuFyboo6MHn9bemn9j6VDyyImB1O5j3zaH6he0
+zjbzLzxeeTc2YFyLZba29HRO+eFLkyrDz9NT37eCY/NWPYp0No31h1bH4prfdlSP
+1b1IWt+anllf2FRwqPbVnvaGjvr8WHXVhr7TS3bMie9fmLdm++WGZfdqhyrrnlwp
+2/Xr3Mt3yveBnKwOJrV83d81o/Fq7vQ7aStqjgy3ve5KYi8vbVp/82TVaM+km3lv
+wJvTn5q/Vcy9aDVt/WkvXZuLu2O/ARtbRy4=
+=/uO9
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/noahgallant
+
+==================================================================
