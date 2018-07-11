@@ -41,10 +41,6 @@ p {
   z-index:10;
 }
 
-footer{
-  background:linear-gradient(var(--theme-yellow), var(--theme-pink));
-}
-
 h1 {
   font-size: 1rem;
   line-height: 1.15;

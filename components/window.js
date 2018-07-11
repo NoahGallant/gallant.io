@@ -1,4 +1,3 @@
-import LinkButton from './linkbutton'
 import Globe from './globe'
 import React from 'react'
 import Content from './content'
@@ -66,20 +65,20 @@ class Window extends React.Component {
       )
     }
     
-    const renderRoles = (roles) => {
-      roles = roles.map(renderRole)
-      /*
-      var output = []
-      roles.forEach(function(role, i) {
-        // if list is more than one item and this is the last item, prefix with 'and '
-        if (roles.length > 1 && i === roles.length - 1) output.push('and ')
-        // output the item
-        output.push(role)
-        // if list is more than 2 items, append a comma to all but the last item
-        if (roles.length > 2 && i < roles.length - 1) output.push(',')
-        // if list is more than 1 item, append a space to all but the last item
-        if (roles.length > 1 && i < roles.length - 1) output.push(' ')
-      })*/
+    const renderRoleBr = (role, i) => {
+      return (
+        <li className="role" key={i}><a href={role[0]}>{role[1]}</a><br/><span className="context">{role[2]}</span></li>
+      )
+    }
+
+    const renderRoles = (roles, nbr=false) => {
+      
+      if (nbr){
+        roles = roles.map(renderRoleBr)
+      }
+      else{
+        roles = roles.map(renderRole)
+      }
       
       return roles
     }
@@ -92,7 +91,14 @@ class Window extends React.Component {
 
     const past= [["https://research.yale.edu", "Yale Medical School", "Researcher"],
                  ["https://madewithover.com", "Over Apps", "Machine Learning Intern"]];
-                  
+
+    const projects = [["https://research.yale.edu", "Sight Network", "Removing ads and paywalls from internet publishing"],
+                      ["https://madewithover.com", "Jig", "Simplified music sharing"],
+                      ["https://github.com/NoahGallant", "Distributed Sign-in", "Social-engineering-proof authentication"],
+                      ["https://github.com/NoahGallant", "Magicrop", "Magical object auto-cropping algorithm"]];
+
+
+    const renderProjects = renderRoles(projects, true)
     const renderJobs = renderRoles(jobs)
     const renderPast = renderRoles(past)
 
@@ -118,18 +124,7 @@ class Window extends React.Component {
           </Content>
           <Content title={'Some Projects'} anchor={'projects'}>
             <ul>
-              <li><a href="https://sight.network">Sight Network</a>
-                  <br/><span className="context">Removing ads and paywalls from internet publishing</span>
-              </li>
-              <li><a href="https://jig.sh">Jig</a> 
-                  <br/><span className="context">Simplified music sharing</span>
-              </li>
-              <li><a href="https://github.com/NoahGallant">Distributed Sign-in</a> 
-                  <br/><span className="context">Social-engineering-proof authentication</span>
-              </li>
-              <li><a href="https://github.com/NoahGallant">Magicrop</a> 
-                  <br/><span className="context">Magical object auto-cropping algorithm</span>
-              </li>
+              {renderProjects}
             </ul>
           </Content>
           <Content title={'My Philosophy'} anchor={'philosophy'}>
@@ -140,7 +135,7 @@ class Window extends React.Component {
               “Design is not just what it looks like and feels like. Design is how it works.”
               </i>
               <br/>
-                <b className="context"> - Steve Jobs</b>
+                <span className="context"> - Steve Jobs</span>
               
             </p>
           </Content>
@@ -234,6 +229,10 @@ class Window extends React.Component {
             text-align:center;
             color: black;
             
+          }
+          .noah a{
+            text-decoration:none;
+            font-weight:800px;
           }
           .noah img{
             vertical-align:middle;
