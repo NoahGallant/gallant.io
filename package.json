@@ -1,0 +1,19 @@
+{
+  "name": "sight-network",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^0.2.0",
+    "jquery": "^3.3.1",
+    "next": "^6.0.3",
+    "react": "16.3.2",
+    "react-anchor-link-smooth-scroll": "^1.0.10",
+    "react-dom": "16.3.2",
+    "react-mailchimp-subscribe": "^2.0.2",
+    "react-modal": "^3.4.5",
+    "styled-components": "^3.3.2"
+  }
+}

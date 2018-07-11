@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+
+.container{
+  box-sizing: border-box;
+}
+
+.floating-container{
+  width:100%;
+  height:100%;
+  /*border:30px solid white;*/
+  position:fixed;
+}
+
+html,
+body {
+  /*background-color: var(--theme-dark);*/
+  color: #1d1d1d;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1rem;
+  z-index:10;
+}
+
+footer{
+  background:linear-gradient(var(--theme-yellow), var(--theme-pink));
+}
+
+h1 {
+  font-size: 1rem;
+  line-height: 1.15;
+  font-weight:400;
+  margin: 0;
+}
+
+h2 {
+  font-weight:400;
+  opacity: 0.5;
+  line-height: 1.15;
+  font-size: 1rem;
+  margin: 0;
+}
+
+h3 {
+  margin-top: 3rem;
+  font-family: var(--serif-font);
+  font-size: 2rem;
+}
+
+h4 {
+  font-size:1.5rem;
+  font-family: var(--serif-font);
+  margin-bottom: 1rem;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.sight {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.section-inner {
+  margin: 0 auto;
+  max-width: 36rem;
+}
+
+.content {
+  margin: 0 auto 4rem auto;
+  max-width: 64rem;
+}
+
+.max-width-1 {
+  max-width: 23.5rem;
+}
+
+.max-width-3 {
+  max-width: 48rem;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.my1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my3 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+
+.mt1 {
+  margin-top: 1rem;
+}
+
+.mt2 {
+  margin-top: 2rem;
+}
+
+.ml2 {
+  margin-left: 2rem;
+}
+
+.p0 {
+  padding: 0
+}
+
+.p1 {
+  padding: 1rem;
+}
+
+.p2 {
+  padding: 2rem;
+}
+
+.px2 {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.pt1 {
+  padding-top: 1rem;
+}
+
+.pt2 {
+  padding-top: 2rem;
+}
+
+.pt3 {
+  padding-top: 3rem;
+}
+
+.pr1 {
+  padding-right: 1rem;
+}
+
+.pl3 {
+  padding-left: 3rem;
+}
+
+.pl4 {
+  padding-left: 4rem;
+}
+
+:root {
+  --window-width: -200px;
+  --window-half-width: -100px;
+  --theme-dark:#1d1d1d;
+  --theme-br: 30px;
+
+  --theme-background: #EAECFF;
+  --theme-blue: #0A1AAE;
+  --theme-purple: rgb(196, 110, 236);
+  --theme-pink: rgb(250, 101, 146);
+  --theme-button-blue: #4C5DEC;
+  --theme-accent: rgba(22, 33, 131, 0.2);
+  --theme-yellow: #FFF27C;
+  --theme-orange: rgb(255, 135, 88);
+  --theme-red: rgb(238, 87, 112);
+  --theme-dark-blue: rgb(18, 0, 100);
+  --border-style: 2px solid var(--theme-blue);
+  --serif-font: 'GT Super Display';
+  --space-font:"Space Mono", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+  "Fira Sans", "Droid Sans", "Helvetica Neue";
+}
+
+@font-face {
+    font-family: 'SF';
+    src: url("/static/fonts/GT-Super-Display-Bold.woff2") format("woff2"),
+         url("/static/fonts/GT-Super-Display-Bold.woff") format("woff"),
+         url("/static/fonts/GT-Super-Display-Bold.otf") format("otf");
+    font-style: normal;
+
+}
+
+.grow {
+  transition: all .1s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+@media (min-width: 52em) {
+  .flex-row { flex-flow: row nowrap; }
+}
+
+@media (max-width: 52em) {
+  .section-inner {
+    padding: 0 2rem;
+  }
+}
+
+.context{
+  opacity:0.5;
+}
+
+@custom-media --breakpoint-sm (min-width: 40em);
+@custom-media --breakpoint-md (min-width: 52em);
+@custom-media --breakpoint-lg (min-width: 64em);
+
+/*# sourceMappingURL=style.css.map*/

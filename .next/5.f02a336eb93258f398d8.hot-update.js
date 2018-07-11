@@ -1,0 +1,64 @@
+webpackHotUpdate(5,{
+
+/***/ "./components/content.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_jsx_style__ = __webpack_require__("./node_modules/styled-jsx/style.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+var _jsxFileName = "/Users/noahgallant/Documents/Work/personal/components/content.js";
+
+
+
+var Content = function Content(props) {
+  return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 2
+    },
+    className: "jsx-659770988"
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("section", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3
+    },
+    className: "jsx-659770988"
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
+    name: props.anchor,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    className: "jsx-659770988"
+  }), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    className: "jsx-659770988" + " " + "middle"
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    className: "jsx-659770988" + " " + "info"
+  }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    className: "jsx-659770988"
+  }, props.title), props.children))), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default.a, {
+    styleId: "659770988",
+    css: "section.jsx-659770988{border-bottom:none;height:100vh;display:table;margin-left:30vw;padding-right:200px;padding-left:50px;top:0;z-index:10;}.info.jsx-659770988{padding-left:3rem;z-index:100;}.middle.jsx-659770988{display:table-cell;height:100vh;width:100vw;vertical-align:middle;}@media (max-width:800px){section.jsx-659770988{left:0;padding:none;right:0;margin:none;}.info.jsx-659770988{padding-left:0;}}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvY29udGVudC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFZZ0IsQUFHNEIsQUFVRixBQUlFLEFBT1QsQUFNTSxPQUxBLFFBTWhCLEdBakJXLENBVkMsQUFjQSxDQVFELFFBQ0ssRUFabEIsRUFWZSxBQWNGLFFBU1gsSUFSc0IsRUFkTixpQkFDRyxHQWNyQixpQkFibUIsa0JBQ1osTUFDSyxXQUNaIiwiZmlsZSI6ImNvbXBvbmVudHMvY29udGVudC5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvbm9haGdhbGxhbnQvRG9jdW1lbnRzL1dvcmsvcGVyc29uYWwiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBDb250ZW50ID0gKHByb3BzKSA9PiAoXG4gIDxkaXY+XG4gICAgPHNlY3Rpb24+XG4gICAgICA8YSBuYW1lPXtwcm9wcy5hbmNob3J9PjwvYT5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWlkZGxlXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaW5mb1wiPlxuICAgICAgICAgIDxoMT57cHJvcHMudGl0bGV9PC9oMT5cbiAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgPC9zZWN0aW9uPlxuXG4gICAgPHN0eWxlIGpzeD57YFxuICAgICAgc2VjdGlvbiB7XG4gICAgICAgIGJvcmRlci1ib3R0b206IG5vbmU7XG4gICAgICAgIGhlaWdodDoxMDB2aDtcbiAgICAgICAgZGlzcGxheTp0YWJsZTtcbiAgICAgICAgbWFyZ2luLWxlZnQ6MzB2dztcbiAgICAgICAgcGFkZGluZy1yaWdodDoyMDBweDtcbiAgICAgICAgcGFkZGluZy1sZWZ0OjUwcHg7XG4gICAgICAgIHRvcDowO1xuICAgICAgICB6LWluZGV4OjEwO1xuICAgICAgfVxuICAgICAgLmluZm97XG4gICAgICAgIHBhZGRpbmctbGVmdDozcmVtOyBcbiAgICAgICAgei1pbmRleDoxMDA7XG4gICAgICB9XG4gICAgICAubWlkZGxlIHtcbiAgICAgICAgZGlzcGxheTogdGFibGUtY2VsbDtcbiAgICAgICAgaGVpZ2h0OjEwMHZoO1xuICAgICAgICB3aWR0aDoxMDB2dztcbiAgICAgICAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbiAgICAgIH1cbiAgICAgIEBtZWRpYSAobWF4LXdpZHRoOiA4MDBweCkge1xuICAgICAgICBzZWN0aW9uIHtcbiAgICAgICAgICAgIGxlZnQ6MDtcbiAgICAgICAgICAgIHBhZGRpbmc6bm9uZTtcbiAgICAgICAgICAgIHJpZ2h0OjA7XG4gICAgICAgICAgICBtYXJnaW46IG5vbmU7XG4gICAgICAgIH1cbiAgICAgICAgLmluZm97XG4gICAgICAgICAgcGFkZGluZy1sZWZ0OjA7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gIDwvZGl2PlxuKVxuXG5leHBvcnQgZGVmYXVsdCBDb250ZW50XG4iXX0= */\n/*@ sourceURL=components/content.js */"
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Content);
+
+/***/ })
+
+})
+//# sourceMappingURL=5.f02a336eb93258f398d8.hot-update.js.map
