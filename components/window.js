@@ -6,15 +6,18 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 class Window extends React.Component {
   state = {
-    offset: 0
+    'offset': 0,
+    'windowWidth': 200,
+    'windowOn': true
   }
 
   getScrollPercent() {
-    var h = document.documentElement, 
-        b = document.body,
-        st = 'scrollTop',
-        sh = 'scrollHeight';
-    return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight);
+
+      var h = document.documentElement, 
+          b = document.body,
+          st = 'scrollTop',
+          sh = 'scrollHeight';
+      return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight);
   }
 
   fuck(pc, r, limit, rate){
@@ -39,8 +42,14 @@ class Window extends React.Component {
   }
 
   componentDidMount() {
-    var event = new Event('scroll2');
     document.addEventListener('scroll', () => {
+      this.refreshWindow()
+    });
+    this.refreshWindow()
+  }
+
+  refreshWindow(){
+
       var screens = 6;
       var rate = 0.5;
       var total = rate * screens + (screens-1);
@@ -49,13 +58,11 @@ class Window extends React.Component {
 
 
       offset = this.fuck(offset, 1, screens-1, rate);
+      var windowOn = document.documentElement.clientWidth > 700;
+    
 
-
-
-      this.setState({offset});
-      document.dispatchEvent(event);
-      this.scrollMe = this.scrollMe.bind(this);
-    });
+      this.setState({'offset': offset, 'windowOn': windowOn});
+    
   }
 
   render() {
@@ -86,28 +93,32 @@ class Window extends React.Component {
     const jobs = [["https://sight.industries", "Sight", "CEO"],
                   ["https://nautil.us", "Nautilus", "Technology Lead"],
                   ["https://columbia.edu", "Columbia", "Student, Researcher"],
-                  ["https://ibm.com", "IBM", "Extreme Blue Intern"],
                   ["https://bcdfa,com", "Design for America", "President"]];
 
     const past= [["https://research.yale.edu", "Yale Medical School", "Researcher"],
                  ["https://madewithover.com", "Over Apps", "Machine Learning Intern"]];
 
-    const projects = [["https://research.yale.edu", "Sight Network", "Removing ads and paywalls from internet publishing"],
+    const projects = [["https://sight.network", "Sight Network", "Removing ads and paywalls from internet publishing"],
                       ["https://madewithover.com", "Jig", "Simplified music sharing"],
-                      ["https://github.com/NoahGallant", "Distributed Sign-in", "Social-engineering-proof authentication"],
-                      ["https://github.com/NoahGallant", "Magicrop", "Magical object auto-cropping algorithm"]];
+                      ["https://www.medtronicdiabetes.com/products/sugar.iq-diabetes-assistant", "Sugar.IQ", "Intelligent diabetes management"]];
+
+  const research = [["https://sight.network/whitepaper.pdf", "Sight Network", "Utilizing applied advantage theory to create an ad-less profit network for internet publishers"],
+                    ["../static/bitcoin.as.advantage.theory.gallant.pdf", "Bitcoin as Game Theory", "An exploration of applied advantage theory"],
+                    ["https://github.com/NoahGallant", "Distributed Sign-in", "Social-engineering-proof though advantage theory system"],
+                    ["https://github.com/NoahGallant", "Magicrop", "Magical object auto-cropping algorithm"]];
 
 
     const renderProjects = renderRoles(projects, true)
     const renderJobs = renderRoles(jobs)
     const renderPast = renderRoles(past)
+    const renderResearch = renderRoles(research)
 
     return (
-      <div className="container">
+      <div className="container" onresize={this.refreshWindow}>
         <div className="floating-container"></div>
         <Backgrounds offset={this.state.offset}/>
         <div className="floating">
-          <Globe offset={this.state.offset}/>
+          <Globe offset={this.state.offset} windowOn={this.state.windowOn} windowWidth={this.state.windowWidth}/>
         </div>
         <div className="scroll">
           <Content title={'Hi, I\'m Noah Gallant'} anchor={'noah'}>
@@ -117,15 +128,9 @@ class Window extends React.Component {
           <Content title={'My Work'} anchor={'work'}>
             <h2>Current</h2>
               <ul>{renderJobs}</ul>
-              <br/>
             <h2>Past</h2>
               <ul>{renderPast}</ul>
             
-          </Content>
-          <Content title={'Some Projects'} anchor={'projects'}>
-            <ul>
-              {renderProjects}
-            </ul>
           </Content>
           <Content title={'My Philosophy'} anchor={'philosophy'}>
             <p>
@@ -139,19 +144,15 @@ class Window extends React.Component {
               
             </p>
           </Content>
-          <Content title={'Interests'} anchor={'interests'}>
-            <h2>Skills</h2>
+          <Content title={'Research'} anchor={'projects'}>
             <ul>
-              <li>Design thinking (<a href="https://www.subtraction.com/2018/04/02/in-defense-of-design-thinking-which-is-terrible/">Mostly</a>)</li>
-              <li>Web design </li>
-              <li>VR (<a href="http://www.normalvr.com/blog/an-open-source-keyboard-to-make-your-own/">Not me but very cool</a>)</li>
-              <li>Blockchain for good (<a href="https://bailbloc.thenewinquiry.com">an example</a>)</li>
+              {renderResearch}
             </ul>
-            <h2>Miscellaneous</h2>
+          </Content>
+
+          <Content title={'Projects'} anchor={'interests'}>
             <ul>
-              <li>Hummus</li>
-              <li>Sustainable architecture</li>
-              <li>Twitter (<a href="https://twitter.com/nglnt">me</a>)</li>
+              {renderProjects}
             </ul>
           </Content>
           <Content title={'Reach me'}>
@@ -169,17 +170,17 @@ class Window extends React.Component {
           I am currently in <i>Durham, NC</i>
         </div>
         <div className="noah">
-          <AnchorLink className="a" href="#works">Work</AnchorLink><span/>
-          <AnchorLink className="a" href="#projects">Projects</AnchorLink><span/>
-          <AnchorLink className="a" href="#noah" ><img src="../static/noah.svg"/></AnchorLink><span/>
-          <AnchorLink className="a" href="#philosophy">Thoughts</AnchorLink><span/>
-          <AnchorLink className="a" href="#interests">Likes</AnchorLink>
+          <AnchorLink className="a" href="#work">Work</AnchorLink><span/>
+          <AnchorLink className="a" href="#philosophy">Philosophy</AnchorLink>
+          <AnchorLink className="a" href="#noah" ><img src="../static/noah.svg"/></AnchorLink>
+          <AnchorLink className="a" href="#research">Research</AnchorLink><span/>
+          <AnchorLink className="a" href="#projects">Projects</AnchorLink>
         </div>
         <div className="empty">
           <a className="floating-anchor" id="noah"/>
-          <a className="floating-anchor" id="works"/>
-          <a className="floating-anchor" id="projects"/>
+          <a className="floating-anchor" id="work"/>
           <a className="floating-anchor" id="philosophy"/>
+          <a className="floating-anchor" id="research"/>
           <a className="floating-anchor" id="interests"/>
         </div>
 
@@ -267,8 +268,8 @@ class Window extends React.Component {
           @media (max-width: 700px) {
             .floating {
                 left:50%;
-                margin-left:var(--window-half-width);
-                top:175px;
+                margin-left:${-this.state.windowWidth/2}px;
+                top:150px;
             }
             body{
               font-size:14px;

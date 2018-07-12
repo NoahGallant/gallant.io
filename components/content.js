@@ -4,6 +4,7 @@ const Content = (props) => (
       <a name={props.anchor}></a>
       <div className="middle">
         <div className="info">
+          <br/>
           <h1>{props.title}</h1>
           {props.children}
         </div>
@@ -15,11 +16,9 @@ const Content = (props) => (
         border-bottom: none;
         height:100vh;
         display:table;
-        padding-top:100px;
         margin-left:30vw;
         padding-right:200px;
         padding-left:50px;
-        padding-bottom:100px;
         top:0;
         z-index:10;
       }

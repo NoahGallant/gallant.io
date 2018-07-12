@@ -50,65 +50,27 @@ const Globe = (props) => (
   
     <style jsx>{`
       .globe {
-        height: 200px;
+        height: ${props.windowWidth}px;
+        opacity: ${props.windowOn ? 1 : 0};
         overflow: hidden;
         transform: translate(0);
         border-radius:50%;
         /*border: 5px solid rgba(0,0,0,0.06);*/
         box-shadow:0px 5px 10px rgba(0,0,0,0.1);
-        width: 200px; 
+        width: ${props.windowWidth}px; 
         background-color:white;
         z-index: 100000;
         position:fixed;
         /*animation: rotationInner 1s linear 0s infinite;*/
       }
 
-      .extraBorder {
-        height: 210px;
-        transform: translate(0);
-        border-radius:50%;
-        border: 5px solid rgba(0,0,0,0.04);
-        width: 210px;
-        margin-left:-5px;
-        margin-top:-5px;
-        z-index: 100000;
-        position:fixed;
-      }
-
-      .extraExtraBorder {
-        height: 220px;
-        transform: translate(0);
-        border-radius:50%;
-        border: 5px solid rgba(0,0,0,0.01);
-        width: 220px;
-        margin-left:-10px;
-        margin-top:-10px;
-        z-index: 100000;
-        position:fixed;
-      }
-      
       .globe svg {
         position:absolute;
         
-        transform: translateX(${ - 200*props.offset + "px"});
+        transform: translateX(${ - props.windowWidth*props.offset + "px"});
         background-color: rgba(255, 255, 255, 1);
         height: 100%;
         width: 600%; 
-      }
-
-      @keyframes rotationInner {
-          from {
-            width: 200px;
-            height:200px;
-            border: 30px solid rgba(255,255,255,0.18);
-          }
-          to {
-            margin-left:15px;
-            margin-top:15px;
-            width: 170px;
-            height:170px;
-            border: 15px solid rgba(255,255,255,0.18);
-          } 
       }
     `}</style>
   </div>

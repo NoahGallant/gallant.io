@@ -171,8 +171,8 @@ section {
 }
 
 :root {
-  --window-width: -200px;
-  --window-half-width: -100px;
+  --window-width: -150px;
+  --window-half-width: -75px;
   --theme-dark:#1d1d1d;
   --theme-br: 30px;
 
